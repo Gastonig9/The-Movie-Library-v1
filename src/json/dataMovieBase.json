@@ -1,0 +1,83 @@
+
+[
+      {
+        "id": 1,
+        "title": "The Shawshank Redemption",
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "synopsis": "Andrew Dufresne is an innocent man who is accused of the murder of his wife. After being sentenced to life imprisonment, he is sent to Shawshank jail, in Maine. Over the years, Andrew will manage to earn the trust of the director of the center and the respect of the other convicts, especially Red, the boss of the mafia.",
+        "premiere": 1994,
+        "director": "Frank Darabont",
+        "scriptwriters": "Stephen King, Frank Daranbont",
+        "rating": 9.3,
+        "cast": "Tim Robbins, Morgan Freeman",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/nms3PT0/the-Shaw-Shank-Redemtion.jpg"
+      },
+      {
+        "id": 2,
+        "title": "The Godfather",
+        "description": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
+        "synopsis": "Don Vito Corleone is the respected and feared boss of one of the five mafia families in New York in the 40s. The man has four children: Connie, Sonny, Fredo and Michael, who wants nothing to do with Corleone's dirty business.",
+        "premiere": 1972,
+        "director": "Francis Ford Coppola",
+        "scriptwriters": "Mario Puzo, Francis Ford Coppola",
+        "rating": 9.2,
+        "cast": "Marlon Brando, Al Pacino, James Caan",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/f2gmsF2/el-Padrino.jpg"
+      },
+      {
+        "id": 3,
+        "title": "The Dark Knight",
+        "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "synopsis": "With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman keeps organized crime in Gotham at bay. Everything changes when the Joker appears, a new criminal who unleashes chaos and terrifies the citizens.",
+        "premiere": 2008,
+        "director": "Christopher Nolan",
+        "scriptwriters": "Christopher Nolan, David S. Goyer",
+        "rating": 9.0,
+        "cast": "Christian Bale, Heath Ledger, Aaron Eckhart",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/HC4L7Cy/the-Dark-Knight.jpg"
+      },
+      {
+        "id": 4,
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "description": "A young hobbit named Frodo has been entrusted with ancient ring but he must travel to Mount Doom in order to destroy it.",
+        "synopsis": "In Middle-earth, the Dark Lord Sauron forged the Great Rings of Power and created one with the power to enslave all of Middle-earth. Frodo Baggins is a hobbit who is made bearer of the powerful One Ring by his uncle Bilbo with the mission of destroying it.",
+        "premiere": 2001,
+        "director": "Peter Jackson",
+        "scriptwriters": "J.R.R. Tolkien(novel `The Fellowship of the Ring`), Fran Walsh",
+        "rating": 8.8,
+        "cast": "Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, Sean Astin",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/MPtpJjX/el-Se-or-De-Los-Anillos.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Forrest Gump",
+        "description": "The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.",
+        "synopsis": "Sitting on a bench in Savannah, Georgia, Forrest Gump waits for the bus. While he takes time to arrive, the young man tells his life to the people who sit down to wait with him. Although he suffers from a slight mental retardation, this does not prevent him from doing wonderful things.",
+        "premiere": 1994,
+        "director": "Robert Zemeckis",
+        "scriptwriters": "Winston Groom, Eric Roth",
+        "rating": 8.8,
+        "cast": "Tom Hanks, Robin Wright, Gary Sinise",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/5Wx480x/forest-Gump.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Pulp Fiction",
+        "description": "The life of a boxer, two hitmen, a gangster's wife and two bandits intertwine in a story of violence and redemption.",
+        "synopsis": "Pulp Fiction's narrative is told out of chronological order and follows three main interrelated stories that each have a different protagonist: Vincent Vega, a hitman; Butch Coolidge, a prizefighter; and Jules Winnfield, Vincent's business partner.[10]",
+        "premiere": 1995,
+        "director": "Quentin Tarantino",
+        "scriptwriters": "Quentin Tarantino, Roger Avary",
+        "rating": 9.3,
+        "cast": "John Travolta, Uma Thurman, Samuel L. Jackson, Harvey Keitel, Tim Roth",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/G7YN9dF/pulp-Fiction.jpg"
+      }
+]
+
+  

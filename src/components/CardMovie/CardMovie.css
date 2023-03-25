@@ -1,0 +1,92 @@
+.cardMovie {
+    overflow: auto;
+    cursor: pointer;
+    
+}
+
+.cardImg {
+    filter: blur(3px);
+}
+
+.cardTitle {
+    width: 85%;
+    margin: auto;
+    background-color: #080809;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23e7e4ec' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    font-family: 'Tilt Prism', cursive;
+    color: #b40d0d;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #ffffff;
+}
+
+.cardText {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    font-family: 'Lalezar', cursive;
+    transition: all 0.3s ease-in-out;
+    color: #e9e9e9;
+    padding: 5px;
+}
+
+.cardFlexContain {
+  background-color: rgb(14, 13, 13);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border-right: 2px solid white;
+}
+
+.cardDirector {
+    width: 50%;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px #000000;
+    margin: auto;
+    font-family: 'Lalezar', cursive;
+}
+
+.cardRating {
+    color: red;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px #000000;
+    width: 100%;
+    margin: auto;
+
+}
+
+.hidden-text {
+    transform: translateX(-50%);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+.card-img {
+    height: 350px; /* altura de la card */
+    object-fit: cover; /* ajustar la imagen al tamaño de la card */
+}

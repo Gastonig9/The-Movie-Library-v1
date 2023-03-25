@@ -1,4 +1,3 @@
-
 [
       {
         "id": 1,
@@ -6,6 +5,7 @@
         "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
         "synopsis": "Andrew Dufresne is an innocent man who is accused of the murder of his wife. After being sentenced to life imprisonment, he is sent to Shawshank jail, in Maine. Over the years, Andrew will manage to earn the trust of the director of the center and the respect of the other convicts, especially Red, the boss of the mafia.",
         "premiere": 1994,
+        "category": "Drama",
         "director": "Frank Darabont",
         "scriptwriters": "Stephen King, Frank Daranbont",
         "rating": 9.3,
@@ -19,6 +19,7 @@
         "description": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
         "synopsis": "Don Vito Corleone is the respected and feared boss of one of the five mafia families in New York in the 40s. The man has four children: Connie, Sonny, Fredo and Michael, who wants nothing to do with Corleone's dirty business.",
         "premiere": 1972,
+        "category": "Drama",
         "director": "Francis Ford Coppola",
         "scriptwriters": "Mario Puzo, Francis Ford Coppola",
         "rating": 9.2,
@@ -32,6 +33,7 @@
         "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
         "synopsis": "With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman keeps organized crime in Gotham at bay. Everything changes when the Joker appears, a new criminal who unleashes chaos and terrifies the citizens.",
         "premiere": 2008,
+        "category": "Action",
         "director": "Christopher Nolan",
         "scriptwriters": "Christopher Nolan, David S. Goyer",
         "rating": 9.0,
@@ -45,6 +47,7 @@
         "description": "A young hobbit named Frodo has been entrusted with ancient ring but he must travel to Mount Doom in order to destroy it.",
         "synopsis": "In Middle-earth, the Dark Lord Sauron forged the Great Rings of Power and created one with the power to enslave all of Middle-earth. Frodo Baggins is a hobbit who is made bearer of the powerful One Ring by his uncle Bilbo with the mission of destroying it.",
         "premiere": 2001,
+        "category": "Adventure",
         "director": "Peter Jackson",
         "scriptwriters": "J.R.R. Tolkien(novel `The Fellowship of the Ring`), Fran Walsh",
         "rating": 8.8,
@@ -58,6 +61,7 @@
         "description": "The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.",
         "synopsis": "Sitting on a bench in Savannah, Georgia, Forrest Gump waits for the bus. While he takes time to arrive, the young man tells his life to the people who sit down to wait with him. Although he suffers from a slight mental retardation, this does not prevent him from doing wonderful things.",
         "premiere": 1994,
+        "category": "Drama",
         "director": "Robert Zemeckis",
         "scriptwriters": "Winston Groom, Eric Roth",
         "rating": 8.8,
@@ -71,13 +75,70 @@
         "description": "The life of a boxer, two hitmen, a gangster's wife and two bandits intertwine in a story of violence and redemption.",
         "synopsis": "Pulp Fiction's narrative is told out of chronological order and follows three main interrelated stories that each have a different protagonist: Vincent Vega, a hitman; Butch Coolidge, a prizefighter; and Jules Winnfield, Vincent's business partner.[10]",
         "premiere": 1995,
+        "category": "Action",
         "director": "Quentin Tarantino",
         "scriptwriters": "Quentin Tarantino, Roger Avary",
         "rating": 9.3,
         "cast": "John Travolta, Uma Thurman, Samuel L. Jackson, Harvey Keitel, Tim Roth",
         "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐⭐",
         "img": "https://i.ibb.co/G7YN9dF/pulp-Fiction.jpg"
-      }
+      },
+      {
+        "id": 7,
+        "title": "The Silence of the Lambs",
+        "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+        "synopsis": "Clarice Starling is a young FBI trainee who is sent to interview Dr. Hannibal Lecter, a brilliant psychiatrist and cannibalistic serial killer, in order to gain insight into the mind of another serial killer named Buffalo Bill, who is skinning his female victims.",
+        "premiere": 1991,
+        "category": "Drama",
+        "director": "Jonathan Demme",
+        "scriptwriters": "Ted Tally, Thomas Harris",
+        "rating": 8.6,
+        "cast": "Jodie Foster, Anthony Hopkins, Scott Glenn",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/MVqWt1F/the-Lamb-Of-Silence.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Fight Club",
+        "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+        "synopsis": "The narrator, a depressed and insomniac office worker, meets Tyler Durden, a charismatic soap salesman. Together, they form an underground fight club that quickly evolves into something much more sinister and anarchic.",
+        "premiere": 1999,
+        "category": "Action",
+        "director": "David Fincher",
+        "scriptwriters": "Chuck Palahniuk, Jim Uhls",
+        "rating": 8.8,
+        "cast": "Brad Pitt, Edward Norton, Helena Bonham Carter",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/6YfhtRQ/the-Fight-Club.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Shutter Island",
+        "description": "Two U.S. Marshals investigate the disappearance of a patient from a hospital for the criminally insane, but their search leads them to a mysterious island where they uncover a web of deception and violence.",
+        "synopsis": "In 1954, U.S. Marshals Teddy Daniels and Chuck Aule investigate the disappearance of a patient from a hospital for the criminally insane on Shutter Island. Teddy is haunted by the death of his wife Dolores Chanal, who was killed in a fire set by Andrew Laeddis, a man Teddy believes is currently a patient at Ashecliffe Hospital. As Teddy and Chuck search the island, they encounter increasingly intense resistance from the hospital staff and Teddy becomes convinced that the staff are hiding something from them.",
+        "premiere": 2010,
+        "category": "Thriller",
+        "director": "Martin Scorsese",
+        "scriptwriters": "Laeta Kalogridis",
+        "rating": 8.2,
+        "cast": "Leonardo DiCaprio, Mark Ruffalo, Ben Kingsley, Max von Sydow, Michelle Williams",
+        "valoration": "⭐⭐⭐⭐⭐⭐⭐⭐",
+        "img": "https://i.ibb.co/g49dF5r/shutter-Island.jpg"
+        },
+        {
+          "id": 10,
+          "title": "Titanic",
+          "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+          "synopsis": "The story is set on the maiden voyage of the R.M.S. Titanic in April 1912, and follows the love story of Rose DeWitt Bukater, a wealthy 17-year-old passenger, and Jack Dawson, a poor artist who won a ticket to the ship in a card game.",
+          "premiere": 1997,
+          "category": "Drama",
+          "director": "James Cameron",
+          "scriptwriters": "James Cameron",
+          "rating": 7.8,
+          "cast": "Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
+          "valoration": "⭐⭐⭐⭐⭐⭐⭐",
+          "img": "https://i.ibb.co/5vx4gZ0/titanic.jpg"
+          }
 ]
 
   

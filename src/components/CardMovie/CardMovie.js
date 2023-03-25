@@ -28,11 +28,9 @@ export default function CardMovie(props) {
                     {props.description}
                 </Card.Text>
                 <div className='d-flex cardFlexContain'>
-                <Card.Text className='cardDirector'>Direct by {props.direction}</Card.Text>
-                <Card.Text className='cardRating'><h1>Rating: {props.ranking}</h1></Card.Text>
                 </div>
                 <Link to={ `/detalle/${props.id}` }>
-                <button className='btn btn-dark'>Ver mas</button>
+                <button className='btn btn-primary w-50'>Ver mas</button>
                 </Link>
             </Card.ImgOverlay>
         </Card>

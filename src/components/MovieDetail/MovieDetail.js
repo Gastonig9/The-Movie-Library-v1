@@ -7,32 +7,40 @@ import { useParams } from 'react-router-dom';
 import dataMovieBase from "../../json/dataMovieBase.json"
 
 
-function getDataMovie(idURL) {
+function getDataMovieIndividual(idURL) {
     let promise = new Promise(resolve => {
         setTimeout(() => {
             const requestMovie = dataMovieBase.find(movie => {
                 return movie.id === Number(idURL)
             })
             resolve(requestMovie)
-        }, 2500);
+        }, 1000);
     })
     return promise;
 }
 export default function MovieDetail() {
     const [movie, setmovie] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
     console.log(id)
 
     useEffect(() => {
-        getDataMovie(id).then(response => {
+        getDataMovieIndividual(id).then(response => {
             console.log("This is the info", response)
             setmovie(response)
-            // setLoading(false);
+            setLoading(false);
         })
     }, []);
     return (
         <>
-            <div class="container text-center bg-dark">
+        {loading ?
+                <div className="d-flex justify-content-center align-items-center bg-dark" style={{ height: "100vh" }}>
+                    <div className="spinner-border text-light loaderCard" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                :
+                <div class="container text-center bg-dark">
                 <div class="row row-cols-3 p-3">
                     <div class="col imgCol">
                         <img className='imgMovie' src={movie.img} alt={`Movie ${movie.title}`}/>
@@ -56,7 +64,8 @@ export default function MovieDetail() {
                         <h5>{movie.valoration}</h5>
                     </div>
                 </div>
-            </div>
+                </div>
+        }
         </>
     )
 }

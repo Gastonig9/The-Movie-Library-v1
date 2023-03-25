@@ -20,8 +20,10 @@ export default function Navegation() {
                     </Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="#">Categories</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link href='/categories/Action'>Action</Nav.Link>
+                        <Nav.Link href='/categories/Adventure'>Adventure</Nav.Link>
+                        <Nav.Link href='/categories/Drama'>Drama</Nav.Link>
+                        <Nav.Link href='/categories/Thriller'>Thiller</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

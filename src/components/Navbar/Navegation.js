@@ -1,4 +1,5 @@
 import React from "react";
+import MovieWidget from "../MovieWidget/MovieWidget";
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
 
@@ -24,6 +25,7 @@ export default function Navegation() {
                         <Nav.Link href='/categories/Adventure'>Adventure</Nav.Link>
                         <Nav.Link href='/categories/Drama'>Drama</Nav.Link>
                         <Nav.Link href='/categories/Thriller'>Thiller</Nav.Link>
+                        <MovieWidget imageURL= "https://cdn-icons-png.flaticon.com/512/107/107831.png" />
                     </Nav>
                 </Container>
             </Navbar>

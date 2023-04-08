@@ -36,14 +36,15 @@ export default function MovieContainer() {
                 </div>
                 :
                 <Flex>
-                    <h1 className='bg-warning text-dark w-100 p-3 titlePrincipal'>Todas las peliculas</h1>
+                    <h1 className='bg-warning text-dark w-75 p-3 titlePrincipal'>All Movies</h1>
                     {movie.map((element) => {
                         return <CardMovie
                             key = {element.id}
                             id = {element.id}
                             img={element.img}
                             title={element.title}
-                            description={element.description} />
+                            description={element.description}
+                            classificationMovie={element.classification} />
                     })}
                 </Flex>
             }

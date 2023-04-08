@@ -1,3 +1,10 @@
-.movieWidget {
-    margin-right: 1200px;
+.titleMovieLink {
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
 }
+
+.titleMovieLink:hover {
+    background-color:  rgb(255, 255, 255);
+    color: black;
+    padding: 5px;
+  }

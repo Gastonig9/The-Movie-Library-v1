@@ -29,9 +29,17 @@ export default function CardMovie(props) {
                 </Card.Text>
                 <div className='d-flex cardFlexContain'>
                 </div>
-                <Link to={ `/detalle/${props.id}` }>
-                <button className='btn btn-primary w-50'>Ver mas</button>
+                <Link to={`/detalle/${props.id}`}>
+                    <button className='btn btn-primary w-50'>Ver mas</button>
                 </Link>
+                <div>
+                    <h4 className='position-absolute top-0 end-0 badge bg-dark p-2'>
+                        This movie has&nbsp;
+                        <span className={`badge text-dark ${props.classificationMovie === 'Classification R' ? 'bg-danger' : props.classificationMovie === 'Classification ATP' ? 'bg-success' : 'bg-warning'}`}>
+                            {props.classificationMovie}
+                        </span>
+                    </h4>
+                </div>
             </Card.ImgOverlay>
         </Card>
     )

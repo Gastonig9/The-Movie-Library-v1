@@ -1,0 +1,27 @@
+.cart-widget {
+    background-color: white;
+    padding: 5px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35rem;
+    cursor: pointer;
+  }
+
+  .cart-widget:hover {
+    transform: scale(1.2);
+    background-color:  rgb(244, 247, 66);
+  }
+  
+  .cart-widget img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .cart-widget p {
+    color: black;
+    font-size: 18px;
+    margin: 0;
+  }

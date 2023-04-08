@@ -10,7 +10,7 @@ function getDataMovie() {
     let promise = new Promise(resolve => {
         setTimeout(() => {
             resolve(dataMovieBase)
-        }, 1000);
+        }, 200);
     })
     return promise;
 }
@@ -29,7 +29,6 @@ function getDataMovieCategory(category) {
 
 export default function MovieCategories() {
     const [movie, setmovie] = useState([]);
-    // const [loading, setLoading] = useState(true);
     const { categorymovie } = useParams();
     console.log(categorymovie)
 
@@ -43,14 +42,24 @@ export default function MovieCategories() {
             getDataMovieCategory(categorymovie).then(response => {
                 console.log("This is the info", response)
                 setmovie(response)
-                // setLoading(false);
             })
         }
-    }, []);
-    
+    }, [categorymovie]);
+
+    if (movie.length === 0) {
+        return (
+            <div className="d-flex justify-content-center align-items-center bg-dark" style={{ height: "100vh" }}>
+                <div className="spinner-border text-light loaderCard" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <>
             <Flex>
+                <h1 className='bg-warning text-dark w-75 p-3 titlePrincipal animate__animated animate__fadeIn'>{categorymovie}</h1>
                 {movie.map((element) => {
                     return <CardMovie
                         key={element.id}
@@ -59,6 +68,7 @@ export default function MovieCategories() {
                         title={element.title}
                         description={element.description} />
                 })}
+                
             </Flex>
         </>
     )

@@ -66,7 +66,8 @@ export default function MovieCategories() {
                         id={element.id}
                         img={element.img}
                         title={element.title}
-                        description={element.description} />
+                        description={element.description}
+                        classificationMovie={element.classification} />
                 })}
                 
             </Flex>

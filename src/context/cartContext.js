@@ -16,9 +16,20 @@ function CartProvider(props) {
   }, [showAlert]);
 
   function addItem(movie, count) {
-    const newCart = [...cart];
-    newCart.push({ ...movie, count });
-    setCart(newCart);
+    let movieExists = cart.some(movieItem => movieItem.id === movie.id)
+
+    if(movieExists) {
+      const newCart = cart.map(item => {
+        if(item.id === movie.id) {
+          return {...item, count: item.count + count}
+        }
+        return item;
+      });
+      setCart(newCart)
+    }else {
+      const newCart = [...cart, {...movie, count}]
+      setCart(newCart)
+    }
     setShowAlert(true);
   }
 
@@ -39,8 +50,12 @@ function CartProvider(props) {
     }
   }
 
+  function getTotalPrice() {
+    return cart.reduce((total, item) => - total + item.price * item.count, 0);
+  }
+
   return (
-    <Provider value={{ cart, addItem, getCountInCart, removeItem }}>
+    <Provider value={{ cart, addItem, getCountInCart, removeItem, getTotalPrice }}>
       {props.children}
       {showAlert && (
         <div id="alertContainer">

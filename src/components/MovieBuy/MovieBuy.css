@@ -1,0 +1,21 @@
+.rowContain {
+    margin-left: 10rem;
+}
+
+.columnTitle {
+    width: 58.6vw;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+.columnDescription{
+    background-color: white;
+    border-right: 2px solid black;
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.columnItems{
+    width: 34.9vw;
+    background-color: white;
+}

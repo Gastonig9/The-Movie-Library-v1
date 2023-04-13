@@ -38,6 +38,7 @@ export default function MovieDetail() {
         addItem(movie, count)
         console.log(cart)
     }
+    
     return (
         <>
             {loading ?
@@ -51,7 +52,7 @@ export default function MovieDetail() {
                     {movie.classification === "Classification R" && (
                         <div class="w-100 alert alert-danger alert-dismissible fade show fixed-bottom position-absolute top-50 start-50 translate-middle" role="alert">
                             <h1><strong>Warning</strong></h1>
-                            <img src='https://i.ibb.co/4Z30Pjm/5a81af7d9123fa7bcc9b0793.png' className='imgWarning'/>
+                            <img src='https://i.ibb.co/4Z30Pjm/5a81af7d9123fa7bcc9b0793.png' className='imgWarning' alt='Warning'/>
                             <h4>This movie is not suitable for children under 18 years of age. 
                             Contains scenes of violence, inappropriate language and explicit sexual content. 
                             Please note that the R rating means that this movie is for adults and may not be suitable for all viewers. 

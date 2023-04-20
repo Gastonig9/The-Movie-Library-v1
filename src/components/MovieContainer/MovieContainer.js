@@ -2,25 +2,14 @@ import React, { useState, useEffect } from 'react';
 import "./MovieContainer.css"
 import CardMovie from '../CardMovie/CardMovie';
 import Flex from '../Flex/Flex';
-
-import dataMovieBase from "../../json/dataMovieBase.json"
-
-function getDataMovie() {
-    let promise = new Promise(resolve => {
-        setTimeout(() => {
-            resolve(dataMovieBase)
-        }, 1000);
-    })
-    return promise;
-}
+import { getDataMovieFb } from '../../services/firestore'
 
 export default function MovieContainer() {
     const [movie, setmovie] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getDataMovie().then(dataMovie => {
-            console.log("This is the info", dataMovie)
+        getDataMovieFb().then(dataMovie => {
             setmovie(dataMovie)
             setLoading(false);
         })

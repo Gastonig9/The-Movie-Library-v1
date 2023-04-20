@@ -15,6 +15,24 @@
     overflow-y: scroll;
 }
 
+.columnDescription::-webkit-scrollbar {
+  width: 5px;
+  background-color: #000000;
+}
+
+.columnDescription::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 5px;
+}
+
+.columnDescription{
+  background-color: white;
+  border-right: 2px solid black;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+
 .columnItems{
     width: 34.9vw;
     background-color: white;

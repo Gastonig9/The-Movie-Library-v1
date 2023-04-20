@@ -9,11 +9,13 @@ import MovieViewWidget from './components/MovieViewWidget/MovieViewWidget';
 // import Footer from './components/Footer/Footer';
 import MovieBuy from './components/MovieBuy/MovieBuy';
 import MovieBuySuccess from './components/MovieBuySuccess/MovieBuySuccess';
+// import { exportData } from './services/firestore';
 
 
 function App() {
   return (
     <div className="App">
+      {/* <button onClick={exportData}>EXPORT DATA TO FIREBASE</button> */}
       <CartProvider>
         <BrowserRouter>
           <Navegation />
@@ -23,7 +25,7 @@ function App() {
             <Route path='/categories/:categorymovie' element={<MovieCategories />}></Route>
             <Route path='/widget' element={<MovieViewWidget/>}></Route>
             <Route path='/buy' element={<MovieBuy/>}></Route>
-            <Route path='/buysuccess' element={<MovieBuySuccess/>}></Route>
+            {/* <Route path='/buysuccess' element={<MovieBuySuccess/>}></Route> */}
             <Route path='*' element={<h1 className='bg-dark text-danger p-3'>404: Not Found</h1>}></Route>
           </Routes>
           {/* <Footer/> */}

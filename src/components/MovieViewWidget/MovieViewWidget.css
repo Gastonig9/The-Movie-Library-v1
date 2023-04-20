@@ -16,5 +16,9 @@
 .btnBuy {
     margin-top: 10px;
     position: relative;
-    left: -260px;
+    left: -170px;
+}
+
+.imgMiniature{
+    width: 10vw;
 }

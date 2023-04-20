@@ -1,11 +1,17 @@
 import React from "react";
 import "./MovieBuy.css"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { createOrder } from '../../services/firestore'
+import FormCheckout from "../FormCheckout/FormCheckout";
+import MovieBuySuccess from "../MovieBuySuccess/MovieBuySuccess";
+
 
 export default function MovieBuy() {
-    const { cart, getTotalPrice } = useContext(cartContext)
+    const { cart, getTotalPrice, clearCart } = useContext(cartContext)
+    const [buyComplete, setBuyComplete] = useState(false);
+    console.log(cart)
 
     function getIvaTotal(price) {
         return Math.floor(price / 1.21)
@@ -14,9 +20,38 @@ export default function MovieBuy() {
     function getIVA(price) {
         return price + getIvaTotal(getTotalPrice());
     }
+
+    async function buyCheckout(userData) {
+        const order = {
+            item: cart,
+            buyer: userData,
+            date: new Date(),
+            total: getTotalPrice()
+        };
+        const { id: orderId } = await createOrder(order);
+        setBuyComplete({ orderId: orderId, ...order });
+        clearCart()
+    }
+
+
+    if (buyComplete) {
+        return (
+            <>
+                <MovieBuySuccess
+                    userOrder={buyComplete.item.map(movieItem => `${movieItem.title}: ${movieItem.count} units`)}
+                    userData={buyComplete.buyer}
+                    userNumber={buyComplete.orderId}
+                    userDate={buyComplete.date.toString()}
+                    userTotal = {buyComplete.total}
+                />
+            </>
+        );
+    }
+
+
     return (
         <>
-            <h2 className="bg-success text-dark w-75 p-3 mx-auto">Buy movie</h2>
+            <h2 className="bg-success text-dark w-75 p-4 mx-auto rounded-pill">Finish your transaction and enter your information to complete the purchase</h2>
             <div className="container ">
                 <div className="row rowContain">
                     <div className="col-9 columnTitle p-2">
@@ -39,11 +74,8 @@ export default function MovieBuy() {
                     </div>
                 </div>
             </div>
-            <Link to= '/buysuccess'>
-            <button className="btn btn-success p-3 w-50 mx-auto mt-5">
-                Buy now
-            </button>
-            </Link>
+            <FormCheckout onCheckout={buyCheckout} />
         </>
     )
 }
+

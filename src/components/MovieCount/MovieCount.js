@@ -23,6 +23,7 @@ export default function MovieCount({ onAddToCart }) {
             setCount(count - 1)
         }
     }
+
     return(
         <>
         <Button className="btn-danger" onClick={handleSubstract}>
@@ -35,7 +36,11 @@ export default function MovieCount({ onAddToCart }) {
             +
         </Button>
 
+        {count === limitSubstract ? <h5 className="text-danger p-1 mt-2">Please add items</h5>
+        :
         <Button onClick={()=>{onAddToCart(count)}}>Agregar al carrito</Button>
+        }
+
         </>
     )
 }

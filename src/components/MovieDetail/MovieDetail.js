@@ -3,23 +3,10 @@ import React, { useState, useEffect, useContext } from 'react';
 // import Flex from '../Flex/Flex';
 import "./MovieDetail.css"
 import { useParams } from 'react-router-dom';
-import dataMovieBase from "../../json/dataMovieBase.json"
+import { getDataMovieIndividualFb } from '../../services/firestore'
 import MovieCount from '../MovieCount/MovieCount';
 import Flex from '../Flex/Flex';
 import { cartContext } from '../../context/cartContext';
-
-
-function getDataMovieIndividual(idURL) {
-    let promise = new Promise(resolve => {
-        setTimeout(() => {
-            const requestMovie = dataMovieBase.find(movie => {
-                return movie.id === Number(idURL)
-            })
-            resolve(requestMovie)
-        }, 1000);
-    })
-    return promise;
-}
 
 export default function MovieDetail() {
     const { cart, addItem } = useContext(cartContext)
@@ -28,7 +15,7 @@ export default function MovieDetail() {
     const { id } = useParams();
 
     useEffect(() => {
-        getDataMovieIndividual(id).then(response => {
+        getDataMovieIndividualFb(id).then(response => {
             setmovie(response)
             setLoading(false);
         })

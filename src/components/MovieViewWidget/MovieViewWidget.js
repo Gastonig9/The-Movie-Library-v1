@@ -11,10 +11,11 @@ function MovieViewWidget() {
       <table className='w-100'>
         <thead>
           <tr id='columnCart'>
-            <th className='pb-2 mb-4 border-bottom border-danger'>Movie</th>
-            <th className='pb-2 mb-4 border-bottom border-danger'>Count</th>
-            <th className='pb-2 mb-4 border-bottom border-danger'>Price</th>
-            <th className='pb-2 mb-4 border-bottom border-danger'>Delete</th>
+          <th className='pb-2 mb-4 border-bottom border-danger p-3'>Miniature</th>
+            <th className='pb-2 mb-4 border-bottom border-danger p-3'>Movie</th>
+            <th className='pb-2 mb-4 border-bottom border-danger p-3'>Count</th>
+            <th className='pb-2 mb-4 border-bottom border-danger p-3'>Price</th>
+            <th className='pb-2 mb-4 border-bottom border-danger p-3'>Delete</th>
           </tr>
         </thead>
 
@@ -33,6 +34,9 @@ function MovieViewWidget() {
             <tbody>
               {cart.map((item) => (
                 <tr key={item.id}>
+                   <td className='fs-3 text  mt-3 p-2'>
+                    <img className='imgMiniature' src={item.img}/>
+                   </td>
                   <td className='fs-3 text  mt-3 p-2'>{item.title}</td>
                   <td className='fs-3 text'>{item.count}</td>
                   <td className='fs-3 text'>{'$' + item.price}</td>

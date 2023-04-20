@@ -51,11 +51,15 @@ function CartProvider(props) {
   }
 
   function getTotalPrice() {
-    return cart.reduce((total, item) => - total + item.price * item.count, 0);
+    return cart.reduce((total, item) => total + item.price * item.count, 0);
+  }
+
+  function clearCart() {
+    setCart([])
   }
 
   return (
-    <Provider value={{ cart, addItem, getCountInCart, removeItem, getTotalPrice }}>
+    <Provider value={{ cart, addItem, getCountInCart, removeItem, getTotalPrice, clearCart }}>
       {props.children}
       {showAlert && (
         <div id="alertContainer">

@@ -3,29 +3,7 @@ import "./MovieCategories.css"
 import Flex from '../Flex/Flex';
 import CardMovie from '../CardMovie/CardMovie';
 import { useParams } from 'react-router-dom';
-
-import dataMovieBase from "../../json/dataMovieBase.json"
-
-function getDataMovie() {
-    let promise = new Promise(resolve => {
-        setTimeout(() => {
-            resolve(dataMovieBase)
-        }, 200);
-    })
-    return promise;
-}
-
-function getDataMovieCategory(category) {
-    let promise = new Promise(resolve => {
-        setTimeout(() => {
-            const filteredMovies = dataMovieBase.filter(movie => {
-                return movie.category === category;
-            });
-            resolve(filteredMovies);
-        }, 1000);
-    });
-    return promise;
-}
+import { getDataMovieFb, getDataMovieCategoryFb } from '../../services/firestore'
 
 export default function MovieCategories() {
     const [movie, setmovie] = useState([]);
@@ -34,12 +12,12 @@ export default function MovieCategories() {
 
     useEffect(() => {
         if (categorymovie === undefined) {
-            getDataMovie().then(dataMovie => {
+            getDataMovieFb().then(dataMovie => {
                 console.log("This is the info", dataMovie)
                 setmovie(dataMovie)
             })
         } else {
-            getDataMovieCategory(categorymovie).then(response => {
+            getDataMovieCategoryFb(categorymovie).then(response => {
                 console.log("This is the info", response)
                 setmovie(response)
             })

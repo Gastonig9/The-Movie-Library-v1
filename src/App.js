@@ -8,7 +8,6 @@ import { CartProvider } from './context/cartContext';
 import MovieViewWidget from './components/MovieViewWidget/MovieViewWidget';
 // import Footer from './components/Footer/Footer';
 import MovieBuy from './components/MovieBuy/MovieBuy';
-import MovieBuySuccess from './components/MovieBuySuccess/MovieBuySuccess';
 // import { exportData } from './services/firestore';
 
 

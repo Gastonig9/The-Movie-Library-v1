@@ -26,9 +26,20 @@ export default function MovieCategories() {
 
     if (movie.length === 0) {
         return (
-            <div className="d-flex justify-content-center align-items-center bg-dark" style={{ height: "100vh" }}>
-                <div className="spinner-border text-light loaderCard" role="status">
-                    <span className="visually-hidden">Loading...</span>
+            <div className='contentLoader'>
+                <div className=" bg-dark" style={{ height: "100vh" }}>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div className="spinner-grow text-primary loaderCard" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                    <h1 className='text-light mt-5 animate__animated animate__flash textLoader'>The Movie Library</h1>
                 </div>
             </div>
         )
@@ -47,7 +58,7 @@ export default function MovieCategories() {
                         description={element.description}
                         classificationMovie={element.classification} />
                 })}
-                
+
             </Flex>
         </>
     )

@@ -18,11 +18,22 @@ export default function MovieContainer() {
     return (
         <>
             {loading ?
-                <div className="d-flex justify-content-center align-items-center bg-dark" style={{ height: "100vh" }}>
-                    <div className="spinner-border text-light loaderCard" role="status">
+            <div className='contentLoader'>
+                <div className=" bg-dark" style={{ height: "100vh" }}>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div className="spinner-grow text-primary loaderCard" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </div>
+                    <h1 className='text-light mt-5 animate__animated animate__flash textLoader'>The Movie Library</h1>
                 </div>
+            </div>
                 :
                 <Flex>
                     <h1 className='bg-warning text-dark w-75 p-3 titlePrincipal'>All Movies</h1>

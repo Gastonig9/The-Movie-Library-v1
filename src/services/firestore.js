@@ -347,7 +347,71 @@ export async function createOrder(order) {
 //           cast: "Uma Thurman, Lucy Liu, Vivica A. Fox, Daryl Hannah, David Carradine",
 //           valoration: "⭐⭐⭐⭐⭐",
 //           img: "https://i.ibb.co/tsH7M8Y/killBill.jpg"
-//         }
+//         },
+//         {
+//           id: 19,
+//           title: "The Conjuring",
+//           price: 7,
+//           description: "A family encounters spirits living among them in their New England farmhouse.",
+//           synopsis: "In 1971, Carolyn and Roger Perron move with their daughters into a dilapidated farmhouse in Harrisville, Rhode Island. The family experiences a series of terrifying events linked to a witch's curse and enlists the help of paranormal investigators Ed and Lorraine Warren to fight the malevolent entities that have possessed their home.",
+//           premiere: 2013,
+//           classification: "Classification R",
+//           category: "Terror",
+//           director: "James Wan",
+//           scriptwriters: "Chad Hayes, Carey Hayes",
+//           rating: 7.5,
+//           cast: "Patrick Wilson, Vera Farmiga",
+//           valoration: "⭐⭐⭐⭐⭐⭐⭐",
+//           img: "https://i.ibb.co/bRRZh8G/the-conjuring-movie-poster-image.jpg"
+//         },
+//         {
+//           id: 20,
+//           title: "The Matrix",
+//           price: 5,
+//           description: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+//           synopsis: "Thomas Anderson is a computer programmer who goes by the hacker alias 'Neo'. He is contacted by a group of rebels who reveal that the world he's living in is a simulated reality created by sentient machines to pacify and subdue the human population. As Neo joins the rebellion and learns to harness his dormant powers, he finds himself in a race against time to save humanity.",
+//           premiere: 1999,
+//           classification: "Classification R",
+//           category: "Science Fiction",
+//           director: "The Wachowskis",
+//           scriptwriters: "The Wachowskis",
+//           rating: 8.7,
+//           cast: "Keanu Reeves, Laurence Fishburne",
+//           valoration: "⭐⭐⭐⭐⭐⭐⭐⭐",
+//           img: "https://i.ibb.co/PWQq5tZ/1366-2000.jpg"
+//         },
+//         {
+//           id: 21,
+//           title: "The Grand Budapest Hotel",
+//           price: 5,
+//           description: "The adventures of Gustave H, a legendary concierge at a famous European hotel between the wars, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
+//           synopsis: "Gustave H is a legendary concierge at a famous European hotel between the wars. He becomes embroiled in a plot to steal a priceless Renaissance painting while also serving as the surrogate father to Zero, a young lobby boy who becomes his most trusted friend.",
+//           premiere: 2014,
+//           classification: "Classification PG",
+//           category: "Comedy",
+//           director: "Wes Anderson",
+//           scriptwriters: "Wes Anderson, Hugo Guinness",
+//           rating: 8.1,
+//           cast: "Ralph Fiennes, F. Murray Abraham",
+//           valoration: "⭐⭐⭐⭐⭐⭐⭐⭐",
+//           img: "https://i.ibb.co/cywgZnp/gran-hotel-budapest-cartel-1513779850.jpg"
+//           },
+//           {
+//           id: 22,
+//           title: "La La Land",
+//           price: 5,
+//           description: "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.",
+//           synopsis: "Sebastian (Ryan Gosling) and Mia (Emma Stone) are drawn together by their common desire to do what they love. But as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.",
+//           premiere: 2016,
+//           classification: "Classification PG",
+//           category: "Musical",
+//           director: "Damien Chazelle",
+//           scriptwriters: "Damien Chazelle",
+//           rating: 8.0,
+//           cast: "Ryan Gosling, Emma Stone",
+//           valoration: "⭐⭐⭐⭐⭐⭐⭐",
+//           img: "https://i.ibb.co/ZSXTPJn/la-la-land-1454x817.jpg"
+//           },
 //     ]
 
 //     const collectionRef = collection(db, "movies")

@@ -7,6 +7,7 @@ import { getDataMovieIndividualFb } from '../../services/firestore'
 import MovieCount from '../MovieCount/MovieCount';
 import Flex from '../Flex/Flex';
 import { cartContext } from '../../context/cartContext';
+import RatingMovie from '../RatingMovie/RatingMovie';
 
 export default function MovieDetail() {
     const { cart, addItem } = useContext(cartContext)
@@ -25,13 +26,24 @@ export default function MovieDetail() {
         addItem(movie, count)
         console.log(cart)
     }
-    
+
     return (
         <>
             {loading ?
-                <div className="d-flex justify-content-center align-items-center bg-dark" style={{ height: "100vh" }}>
-                    <div className="spinner-border text-light loaderCard" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                <div className='contentLoader'>
+                    <div className=" bg-dark" style={{ height: "100vh" }}>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div className="spinner-grow text-primary loaderCard" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                        <h1 className='text-light mt-5 animate__animated animate__flash textLoader'>The Movie Library</h1>
                     </div>
                 </div>
                 :
@@ -39,11 +51,11 @@ export default function MovieDetail() {
                     {movie.classification === "Classification R" && (
                         <div class="w-100 alert alert-danger alert-dismissible fade show fixed-bottom position-absolute top-50 start-50 translate-middle" role="alert">
                             <h1><strong>Warning</strong></h1>
-                            <img src='https://i.ibb.co/4Z30Pjm/5a81af7d9123fa7bcc9b0793.png' className='imgWarning' alt='Warning'/>
-                            <h4>This movie is not suitable for children under 18 years of age. 
-                            Contains scenes of violence, inappropriate language and explicit sexual content. 
-                            Please note that the R rating means that this movie is for adults and may not be suitable for all viewers. 
-                            If you are not sure, we recommend that you look up more information about the film before proceeding.</h4>
+                            <img src='https://i.ibb.co/4Z30Pjm/5a81af7d9123fa7bcc9b0793.png' className='imgWarning' alt='Warning' />
+                            <h4>This movie is not suitable for children under 18 years of age.
+                                Contains scenes of violence, inappropriate language and explicit sexual content.
+                                Please note that the R rating means that this movie is for adults and may not be suitable for all viewers.
+                                If you are not sure, we recommend that you look up more information about the film before proceeding.</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     )}
@@ -70,11 +82,8 @@ export default function MovieDetail() {
                                 <MovieCount onAddToCart={addOnCart} />
                             </Flex>
                         </div>
-                        <div className="col">
-                            <h5 className='text-light'>Valoration: {movie.rating}</h5>
-                            <h5>{movie.valoration}</h5>
-                        </div>
                     </div>
+                    <RatingMovie />
                 </div>
             }
         </>

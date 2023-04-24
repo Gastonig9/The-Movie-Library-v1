@@ -46,10 +46,10 @@ export default function FormCheckout({ onCheckout }) {
           <input value={userData.phone} name="phone" type="number" required onChange={handleInputChange} className="form-control" />
         </div>
         <button onClick={onSubmit} type="submit" className="btn btn-primary mb-1 mt-3 w-50">
-          Crear orden
+          Create order
         </button>
         <br />
-        <button onClick={clearFormData} className="btn btn-danger">Cancelar</button>
+        <button onClick={clearFormData} className="btn btn-danger">Cancel</button>
       </form>
     </>
   );

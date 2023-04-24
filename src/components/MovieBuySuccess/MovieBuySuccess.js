@@ -16,7 +16,7 @@ export default function MovieBuySuccess(props) {
                 <p>Date: {props.userDate} </p>
                 <hr class="border border-dark border-1"></hr>
                 <h6>Buy: {props.userOrder} </h6>
-                <h6>Total: {props.userTotal}</h6>
+                <h6>Total: ${props.userTotal}</h6>
             </div>
         </>
     )

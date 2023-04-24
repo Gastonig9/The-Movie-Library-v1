@@ -5,6 +5,7 @@ const cartContext = createContext({ default: "default" });
 const Provider = cartContext.Provider;
 
 function CartProvider(props) {
+  const [saveRatingArray, setSaveRatingArray] = useState([])
   const [cart, setCart] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
 
@@ -58,8 +59,13 @@ function CartProvider(props) {
     setCart([])
   }
 
+  function saveRating(info) {
+    const infoRating = [...saveRatingArray, info]
+    setSaveRatingArray(infoRating)
+  }
+
   return (
-    <Provider value={{ cart, addItem, getCountInCart, removeItem, getTotalPrice, clearCart }}>
+    <Provider value={{ cart, addItem, getCountInCart, removeItem, getTotalPrice, clearCart, saveRating }}>
       {props.children}
       {showAlert && (
         <div id="alertContainer">

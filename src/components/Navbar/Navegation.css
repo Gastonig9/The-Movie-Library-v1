@@ -4,7 +4,12 @@
 }
 
 .titleMovieLink:hover {
-    background-color:  rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     color: black;
     padding: 5px;
-  }
+}
+
+.titleWeb {
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: 15px;
+}

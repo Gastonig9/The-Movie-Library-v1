@@ -1,0 +1,27 @@
+.rating-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-container h1 {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .inputRadio {
+    appearance: none;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out;
+    margin: 10px;
+  }
+  
+  .inputRadio:checked {
+    border-color: #FFD700;
+    background-color: #FFD700;
+  }
+  
+  

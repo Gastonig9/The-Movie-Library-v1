@@ -22,32 +22,32 @@ export default function Navegation() {
                             height="30"
                             className="d-inline-block align-top"
                         />{' '}
-                        The Movie Library
+                        <span className="titleWeb">The Movie Library</span>
                     </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link className="text-dark">
-                            <Link className="text-decoration-none titleMovieLink" to="/">Home</Link>
-                        </Nav.Link>
+                        <Nav.Item>
+                            <Link className="nav-link text-light" to="/">Home</Link>
+                        </Nav.Item>
 
-                        <Nav.Link>
-                            <Link className="text-decoration-none titleMovieLink" to='/categories/Action'>Action</Link>
-                        </Nav.Link>
+                        <Nav.Item>
+                            <Link className="nav-link text-light" to='/categories/Action'>Action</Link>
+                        </Nav.Item>
 
-                        <Nav.Link>
-                            <Link className="text-decoration-none titleMovieLink" to='/categories/Adventure'>Adventure</Link>
-                        </Nav.Link>
-                        
-                        <Nav.Link>
-                            <Link className="text-decoration-none titleMovieLink" to='/categories/Drama'>Drama</Link>
-                        </Nav.Link>
+                        <Nav.Item>
+                            <Link className="nav-link text-light" to='/categories/Adventure'>Adventure</Link>
+                        </Nav.Item>
 
-                        <Nav.Link>
-                            <Link className="text-decoration-none titleMovieLink" to='/categories/Thriller'>Thriller</Link>
-                        </Nav.Link>
+                        <Nav.Item>
+                            <Link className="nav-link text-light" to='/categories/Drama'>Drama</Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                            <Link className="nav-link text-light" to='/categories/Thriller'>Thriller</Link>
+                        </Nav.Item>
+
                         <Link className="text-decoration-none" to="/widget">
-                        <MovieWidget imageURL= "https://cdn-icons-png.flaticon.com/512/107/107831.png" inCart={cart.length} />
+                            <MovieWidget imageURL="https://cdn-icons-png.flaticon.com/512/107/107831.png" inCart={cart.length} />
                         </Link>
-                        
                     </Nav>
                 </Container>
             </Navbar>

@@ -1,13 +1,13 @@
 import { initializeApp } from "firebase/app";
-import { 
+import {
   addDoc,
-  collection, 
-  doc, 
-  getDoc, 
-  getDocs, 
-  getFirestore, 
-  query, 
-  where 
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  query,
+  where
 } from "firebase/firestore"
 
 const firebaseConfig = {
@@ -22,13 +22,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
-export async function getDataMovieFb(){
+export async function getDataMovieFb() {
   const getMoviesCollection = collection(db, "movies")
   const snapMovie = await getDocs(getMoviesCollection)
   const documents = snapMovie.docs
-  
+
   const documentsData = documents.map(doc => {
-    return {id: doc.id, ...doc.data()}
+    return { id: doc.id, ...doc.data() }
   })
   return documentsData;
 }
@@ -36,7 +36,7 @@ export async function getDataMovieFb(){
 export async function getDataMovieIndividualFb(idURL) {
   const docsCollection = doc(db, "movies", idURL)
   const docSnap = await getDoc(docsCollection)
-  return {id: docSnap.id, ...docSnap.data()}
+  return { id: docSnap.id, ...docSnap.data() }
 }
 
 export async function getDataMovieCategoryFb(categoryid) {
@@ -45,8 +45,20 @@ export async function getDataMovieCategoryFb(categoryid) {
   const docSnap = await getDocs(queryMovie)
   const documents = docSnap.docs
 
-  const documentsData = documents.map(doc=> {
-    return {id: doc.id, ...doc.data()}
+  const documentsData = documents.map(doc => {
+    return { id: doc.id, ...doc.data() }
+  })
+  return documentsData;
+}
+
+export async function searchMovieIndividual(titleMovie) {
+  const getMoviesCollection = collection(db, "movies")
+  const queryMovie = query(getMoviesCollection, where("title", "==", titleMovie))
+  const docSnap = await getDocs(queryMovie)
+  const documents = docSnap.docs
+
+  const documentsData = documents.map(doc => {
+    return { id: doc.id, ...doc.data() }
   })
   return documentsData;
 }
@@ -55,6 +67,24 @@ export async function createOrder(order) {
   const orderCollection = collection(db, "orders")
   const addOrder = await addDoc(orderCollection, order)
   return { id: addOrder.id, ...order };
+}
+
+export async function createComment(comment) {
+  const commentCollection = collection(db, "comments")
+  const addComment = await addDoc(commentCollection, comment)
+  return addComment;
+}
+
+export async function getComment(commentId) {
+  const getCommentCollection = collection(db, "comments")
+  const queryComment = query(getCommentCollection, where("movieId", "==", commentId))
+  const docSnap = await getDocs(queryComment)
+  const documents = docSnap.docs
+
+  const documentsData = documents.map(doc => {
+    return { id: doc.id, ...doc.data() }
+  })
+  return documentsData;
 }
 
 
@@ -423,3 +453,4 @@ export async function createOrder(order) {
 //         console.log("movie export with ID: " + response.id);
 //     }
 // }
+

@@ -1,0 +1,27 @@
+.iconLike {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.iconLike:hover {
+    transform: scale(1.2);
+  }  
+
+.iconDislike {
+    cursor: pointer;
+}
+
+.iconDislike:hover {
+    transform: scale(1.2);
+  }
+  
+
+.iconShare {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.iconShare:hover {
+    transform: scale(1.2);
+  }
+  

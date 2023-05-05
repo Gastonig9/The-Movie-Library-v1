@@ -6,7 +6,6 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import MovieCategories from './components/MovieCategories/MovieCategories';
 import { CartProvider } from './context/cartContext';
 import MovieViewWidget from './components/MovieViewWidget/MovieViewWidget';
-// import Footer from './components/Footer/Footer';
 import MovieBuy from './components/MovieBuy/MovieBuy';
 // import { exportData } from './services/firestore';
 

@@ -8,6 +8,7 @@ function CartProvider(props) {
   const [saveRatingArray, setSaveRatingArray] = useState([])
   const [cart, setCart] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     if (showAlert) {
@@ -65,7 +66,7 @@ function CartProvider(props) {
   }
 
   return (
-    <Provider value={{ cart, addItem, getCountInCart, removeItem, getTotalPrice, clearCart, saveRating }}>
+    <Provider value={{ cart, searchResults, setSearchResults, addItem, getCountInCart, removeItem, getTotalPrice, clearCart, saveRating }}>
       {props.children}
       {showAlert && (
         <div id="alertContainer">

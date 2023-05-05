@@ -30,7 +30,7 @@ export default function CardMovie(props) {
                 <div className='d-flex cardFlexContain'>
                 </div>
                 <Link to={`/detalle/${props.id}`}>
-                    <button className='btn btn-primary w-50'>Ver mas</button>
+                    <button className='btn btn-primary w-50 btn-custom'>Ver mas</button>
                 </Link>
                 <div>
                     <h4 className='position-absolute top-0 end-0 badge bg-dark p-2'>

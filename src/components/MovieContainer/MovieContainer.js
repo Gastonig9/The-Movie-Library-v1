@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import "./MovieContainer.css"
 import CardMovie from '../CardMovie/CardMovie';
 import Flex from '../Flex/Flex';
+import { cartContext } from '../../context/cartContext';
 import { getDataMovieFb } from '../../services/firestore'
 
 export default function MovieContainer() {
     const [movie, setmovie] = useState([]);
+    const { searchResults } = useContext(cartContext)
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getDataMovieFb().then(dataMovie => {
             setmovie(dataMovie)
+            console.log(searchResults)
             setLoading(false);
         })
     }, []);

@@ -1,0 +1,115 @@
+.titleReview {
+  font-family: 'Bruno Ace SC', cursive;
+}
+
+.inputUserName {
+  width: 50%;
+  margin-left: 15px;
+}
+
+.inputComment {
+  width: 50%;
+  resize: vertical;
+  margin-left: 15px;
+}
+
+.contentForm {
+  background-color: #111111;
+  ;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 15px 5px rgb(248, 237, 75);
+}
+
+.titleReview {
+  text-shadow: 2px 2px #fff;
+  border: 2px solid #fff;
+  display: inline-block;
+  padding: 10px;
+}
+
+/*INPUT COMMENTS*/
+
+.inputUserName {
+  display: inline-block;
+  width: calc(50% - 5px);
+  margin-right: 10px;
+}
+
+.inputComment {
+  display: inline-block;
+  width: calc(50% - 5px);
+}
+
+/*BUTTON SUBMIT*/
+
+button[type="submit"] {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2480f7;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/*INPUT FILE*/
+.inputFile {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f5f5f5;
+  
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputFile:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+.inputFile::before {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inputFile input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.inputFile input[type="file"]::before {
+  content: 'No file selected';
+  display: inline-block;
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.inputFile input[type="file"]:not([value=""]):before {
+  content: attr(data-file-name);
+  color: #fff;
+}

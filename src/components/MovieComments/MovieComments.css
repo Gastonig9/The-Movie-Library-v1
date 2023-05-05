@@ -1,0 +1,48 @@
+.commentsContainer {
+    background-color: #031f42;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 15px 5px rgb(248, 237, 75);
+}
+
+.commentsTitle {
+    text-shadow: 2px 2px #fff;
+    border: 2px solid #fff;
+    display: inline-block;
+    padding: 10px;
+}
+
+.imgUser {
+    width: 4.5vw;
+}
+
+.msgContain .userBrand {
+    text-align: start;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.msgContain .userBrand span {
+    margin-left: 10px;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.msgContain .commentBrand {
+    background-color: rgba(3, 31, 66, 0.9);
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 17px;
+    font-family: 'Secular One', sans-serif;
+    color: bisque;
+    text-align: start;
+    margin: 20px;
+    width: 75%;
+}
+
+.msgContain .commentBrand p:first-child {
+    text-align: end;
+}
+
+.msgContain .commentBrand img {
+    width: 20vw;
+}

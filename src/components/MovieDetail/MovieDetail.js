@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-// import CardMovie from '../CardMovie/CardMovie';
-// import Flex from '../Flex/Flex';
 import "./MovieDetail.css"
 import { useParams } from 'react-router-dom';
 import { getDataMovieIndividualFb } from '../../services/firestore'
@@ -8,6 +6,8 @@ import MovieCount from '../MovieCount/MovieCount';
 import Flex from '../Flex/Flex';
 import { cartContext } from '../../context/cartContext';
 import RatingMovie from '../RatingMovie/RatingMovie';
+import MovieReview from '../MovieReview/MovieReview';
+import MovieComments from '../MovieComments/MovieComments';
 
 export default function MovieDetail() {
     const { cart, addItem } = useContext(cartContext)
@@ -49,14 +49,14 @@ export default function MovieDetail() {
                 :
                 <div className="container text-center bg-dark">
                     {movie.classification === "Classification R" && (
-                        <div class="w-100 alert alert-danger alert-dismissible fade show fixed-bottom position-absolute top-50 start-50 translate-middle" role="alert">
+                        <div className="w-100 alert alert-danger alert-dismissible fade show fixed-bottom position-absolute top-50 start-50 translate-middle" role="alert">
                             <h1><strong>Warning</strong></h1>
                             <img src='https://i.ibb.co/4Z30Pjm/5a81af7d9123fa7bcc9b0793.png' className='imgWarning' alt='Warning' />
                             <h4>This movie is not suitable for children under 18 years of age.
                                 Contains scenes of violence, inappropriate language and explicit sexual content.
                                 Please note that the R rating means that this movie is for adults and may not be suitable for all viewers.
                                 If you are not sure, we recommend that you look up more information about the film before proceeding.</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     )}
                     <div className="row row-cols-3 p-3">
@@ -84,6 +84,9 @@ export default function MovieDetail() {
                         </div>
                     </div>
                     <RatingMovie />
+                    <MovieReview/>
+                    <hr class="border border-light border-3 opacity-75"></hr>
+                    <MovieComments/>
                 </div>
             }
         </>

@@ -5,75 +5,77 @@ import "./RatingMovie.css";
 import { useParams } from "react-router-dom";
 
 const RatingComponent = () => {
-    const [movie, setMovie] = useState([]);
-    const [rating, setRating] = useState(0);
-    const { saveRating } = useContext(cartContext);
-    const { id } = useParams();
-  
-    useEffect(() => {
-      getDataMovieIndividualFb(id).then((response) => {
-        setMovie(response);
-      });
-    }, [id]);
-  
-    const handleRating = (value) => {
-      setRating(value);
-      saveRating(value);
-  
-      const storedRatings = JSON.parse(localStorage.getItem("ratings")) || [];
-      const movieIndex = storedRatings.findIndex((m) => m.id === id);
-  
-      if (movieIndex === -1) {
-        // La película aún no tiene calificaciones almacenadas
-        storedRatings.push({ id, ratings: [value] });
-      } else {
-        // La película ya tiene calificaciones almacenadas
-        storedRatings[movieIndex].ratings.push(value);
-      }
-  
-      localStorage.setItem("ratings", JSON.stringify(storedRatings));
-      setMovie((prevMovie) => {
-        const currentRating = prevMovie.currentRating || [];
-        const newCurrentRating = [...currentRating, value];
-        const newMovie = { ...prevMovie, currentRating: newCurrentRating };
-        return newMovie;
-      });
-    };
-  
-    const calculateRating = () => {
-      const storedRatings = JSON.parse(localStorage.getItem("ratings")) || [];
-      const movieRatings = storedRatings.find((m) => m.id === id)?.ratings || [];
-      const sum = movieRatings.reduce((total, rating) => total + rating, 0);
-      const average = sum / movieRatings.length || 0;
-      return average.toFixed(1);
-    };
-  
-    return (
-      <div className="rating-component">
-        <h1 className="text-light">Rate this movie</h1>
-        <div className="star-container mx-auto">
-          {[...Array(10)].map((star, i) => {
-            const ratingValue = i + 1;
-            return (
-              <label key={id}>
-                <input
-                  className="inputRadio"
-                  type="radio"
-                  name="rating"
-                  value={ratingValue}
-                  onClick={() => handleRating(ratingValue)}
-                />
-              </label>
-            );
-          })}
-        </div>
-        <h1 className="text-light">{calculateRating()}</h1>
-      </div>
-    );
+  const [movie, setMovie] = useState([]);
+  const [rating, setRating] = useState(0);
+  const { saveRating } = useContext(cartContext);
+  const { id } = useParams();
+
+  useEffect(() => {
+    getDataMovieIndividualFb(id).then((response) => {
+      setMovie(response);
+    });
+  }, [id]);
+
+  const handleRating = (value) => {
+    setRating(value);
+    saveRating(value);
+
+    const storedRatings = JSON.parse(localStorage.getItem("ratings")) || [];
+    const movieIndex = storedRatings.findIndex((m) => m.id === id);
+
+    if (movieIndex === -1) {
+      // La película aún no tiene calificaciones almacenadas
+      storedRatings.push({ id, ratings: [value] });
+    } else {
+      // La película ya tiene calificaciones almacenadas
+      storedRatings[movieIndex].ratings.push(value);
+    }
+
+    localStorage.setItem("ratings", JSON.stringify(storedRatings));
+    setMovie((prevMovie) => {
+      const currentRating = prevMovie.currentRating || [];
+      const newCurrentRating = [...currentRating, value];
+      const newMovie = { ...prevMovie, currentRating: newCurrentRating };
+      return newMovie;
+    });
   };
-  
-  export default RatingComponent;
-  
+
+  const calculateRating = () => {
+    const storedRatings = JSON.parse(localStorage.getItem("ratings")) || [];
+    const movieRatings = storedRatings.find((m) => m.id === id)?.ratings || [];
+    const sum = movieRatings.reduce((total, rating) => total + rating, 0);
+    const average = sum / movieRatings.length || 0;
+    return average.toFixed(1);
+  };
+
+  return (
+    <div className="rating-component animate__animated animate__fadeIn">
+      <h1 className="text-light ratingMovieTitle">Rate this movie</h1>
+      <div className="star-container mx-auto">
+        {[...Array(10)].map((star, i) => {
+          const ratingValue = i + 1;
+          return (
+            <label key={i}>
+              <input
+                className="inputRadio d-none"
+                type="radio"
+                name="rating"
+                value={ratingValue}
+                onClick={() => handleRating(ratingValue)}
+              />
+              <i className="fas fa-star"></i>
+            </label>
+          );
+        })}
+      </div>
+
+      <h1 className="text-light">{calculateRating()}</h1>
+    </div>
+  );
+};
+
+export default RatingComponent;
+
 
 // const handleRating = (value) => {
 //     setRating(value);
@@ -84,7 +86,7 @@ const RatingComponent = () => {
 //         const newMovie = { ...prevMovie, currentRating: newCurrentRating };
 //         console.log(newMovie);
 //         return newMovie;
-//       });   
+//       });
 // };
 
 

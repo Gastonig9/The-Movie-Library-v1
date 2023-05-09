@@ -1,0 +1,16 @@
+.imgContain {
+    display: flex;
+    justify-content: center;
+}
+
+.imgContain img {
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.imgContain img:hover {
+    transform: scale(1.1);
+}

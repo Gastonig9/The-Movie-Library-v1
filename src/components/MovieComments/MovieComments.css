@@ -37,6 +37,13 @@
     text-align: start;
     margin: 20px;
     width: 75%;
+    transition: transform 0.5s ease;
+}
+
+.msgContain .commentBrand:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    background-color: rgba(6, 52, 110, 0.9);
 }
 
 .msgContain .commentBrand p:first-child {

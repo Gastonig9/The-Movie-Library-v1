@@ -6,7 +6,8 @@ import { cartContext } from '../../context/cartContext';
 
 const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
-  const { searchResults, setSearchResults } = useContext(cartContext)
+  const [searchError, setSearchError] = useState(false);
+  const { setSearchResults } = useContext(cartContext)
 
   const handleSearchChange = (e) => {
     const searchValue = e.target.value;
@@ -16,12 +17,18 @@ const SearchBar = () => {
   const handleSearchSubmit = async (evt) => {
     evt.preventDefault();
     const results = await searchMovieIndividual(searchValue);
-    setSearchResults(results);
-    console.log(results);
+    if (results.length > 0) {
+      setSearchResults(results);
+      setSearchError(false);
+    } else {
+      setSearchResults([]);
+      setSearchError(true);
+    }
+    setSearchValue("");
   }
 
   return (
-    <Form inline className="search-form d-flex justify-content-center mb-3">
+    <Form inline="true" className="search-form d-flex justify-content-center mb-3">
       <Form.Control
         type="text"
         placeholder="Search Movies"
@@ -32,6 +39,9 @@ const SearchBar = () => {
       <Button variant="outline-light" className="search-button" onClick={handleSearchSubmit}>
         <i className="fas fa-search"></i>
       </Button>
+      {searchError && (
+        <p className="search-error">No movies found</p>
+      )}
     </Form>
   );
 };

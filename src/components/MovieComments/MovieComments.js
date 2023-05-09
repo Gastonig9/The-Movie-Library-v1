@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { getComment } from '../../services/firestore'
 import { useParams } from "react-router-dom";
 import LikeCount from "../LikeCount/LikeCount";
+import CommentDetail from "../CommentDetail/CommentDetail";
 
 export default function MovieComments() {
     const [comment, setComment] = useState([])
+    const [selectedComment, setSelectedComment] = useState(null);
     const { id } = useParams()
 
     useEffect(() => {
@@ -16,8 +18,17 @@ export default function MovieComments() {
         fetchComments();
     }, [id]);
 
+    const handleClickComment = (comment) => {
+        setSelectedComment(comment);
+    }
+
+    const handleCloseComment = () => {
+        setSelectedComment(null);
+    }
+
     return (
         <>
+            {selectedComment && <CommentDetail comment={selectedComment} onClose={handleCloseComment} />}
             {comment.length === 0 ? (
                 <div className="commentsContainer">
                     <h1 className="text-light mt-3 commentsTitle">Feedback</h1>
@@ -35,12 +46,12 @@ export default function MovieComments() {
                                     <i className="far fa-user"></i>
                                     <span className="text-end">{element.username} says: </span>
                                 </div>
-                                <div className="commentBrand">
+                                <div onClick={() => handleClickComment(element)} className="commentBrand">
                                     <p class="card-text"><small class="text-muted">Posted the day {element.date}</small></p>
                                     <p>{element.comments}</p>
                                     <img className="imgUser" src={element.file} alt="user send" />
-                                    <hr/>
-                                    <LikeCount/>
+                                    <hr />
+                                    <LikeCount />
                                 </div>
                             </div>
                         </div>

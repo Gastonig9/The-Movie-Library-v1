@@ -8,17 +8,14 @@ import { getDataMovieFb, getDataMovieCategoryFb } from '../../services/firestore
 export default function MovieCategories() {
     const [movie, setmovie] = useState([]);
     const { categorymovie } = useParams();
-    console.log(categorymovie)
 
     useEffect(() => {
         if (categorymovie === undefined) {
             getDataMovieFb().then(dataMovie => {
-                console.log("This is the info", dataMovie)
                 setmovie(dataMovie)
             })
         } else {
             getDataMovieCategoryFb(categorymovie).then(response => {
-                console.log("This is the info", response)
                 setmovie(response)
             })
         }

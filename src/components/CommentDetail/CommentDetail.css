@@ -1,0 +1,49 @@
+.msgContainDetail {
+    width: 100%;
+    position: fixed;
+    bottom: 150px;
+    left: 170px;
+    z-index: 9999;
+}
+
+.msgContainDetail .userBrandDetail {
+    text-align: start;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.msgContainDetail .userBrandDetail span {
+    margin-left: 10px;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.msgContainDetail .commentBrandDetail {
+    background-color: rgb(3, 31, 66);
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 17px;
+    font-family: 'Secular One', sans-serif;
+    color: bisque;
+    text-align: start;
+    margin: 20px;
+    width: 75%;
+}
+
+.msgContainDetail .commentBrandDetail p:first-child {
+    text-align: end;
+}
+
+.msgContainDetail .commentBrandDetail img {
+    width: 20vw;
+}
+
+.buttonMsgDetail {
+    width: 10%;
+    background-color: rgb(238, 23, 23);
+    font-family: 'Bruno Ace SC', cursive;
+    margin-right: 290px;
+}
+
+.buttonMsgDetail:hover {
+    background-color: rgb(255, 255, 255);
+}

@@ -8,6 +8,7 @@ import { cartContext } from '../../context/cartContext';
 import RatingMovie from '../RatingMovie/RatingMovie';
 import MovieReview from '../MovieReview/MovieReview';
 import MovieComments from '../MovieComments/MovieComments';
+import MovieGallery from '../MovieGallery/MovieGallery';
 
 export default function MovieDetail() {
     const { cart, addItem } = useContext(cartContext)
@@ -83,9 +84,12 @@ export default function MovieDetail() {
                             </Flex>
                         </div>
                     </div>
+                    <hr className="border border-light border-3 opacity-75"></hr>
+                    <MovieGallery/>
+                    <hr className="border border-light border-3 opacity-75"></hr>
                     <RatingMovie />
                     <MovieReview/>
-                    <hr class="border border-light border-3 opacity-75"></hr>
+                    <hr className="border border-light border-3 opacity-75"></hr>
                     <MovieComments/>
                 </div>
             }

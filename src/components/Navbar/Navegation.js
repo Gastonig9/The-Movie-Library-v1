@@ -1,7 +1,6 @@
 import React from "react";
 import "./Navegation.css";
 import MovieWidget from "../MovieWidget/MovieWidget";
-import SearchBar from "../SearchBar/SearchBar";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
@@ -55,7 +54,6 @@ export default function Navegation() {
             </Nav.Item>
           </Nav>
           <div className="movie-search-container">
-            <SearchBar />
             <Link className="text-decoration-none" to="/widget">
               <MovieWidget
                 imageURL="https://cdn-icons-png.flaticon.com/512/107/107831.png"

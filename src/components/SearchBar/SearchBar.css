@@ -1,7 +1,16 @@
 .search-bar {
-    height: 40px;
-  }
+  height: 40px;
+}
 
 .search-button {
-    margin-top: 3.5;
+  margin-top: 3.5;
+  height: 40px;
+}
+
+.search-error {
+  width: 100%;
+  margin-top: 10px;
+  font-family: 'Bruno Ace SC', cursive;
+  color: red;
+  font-size: 15px;
 }

@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import "./LikeCount.css";
 
 export default function LikeCount() {
+  const random = Math.floor(Math.random(0,15))
+
   const [addLike, setAddLike] = useState(
-    parseInt(localStorage.getItem("addLike")) || 0
+    parseInt(localStorage.getItem("addLike")) || random
   );
   const [restLike, setRestLike] = useState(
-    parseInt(localStorage.getItem("restLike")) || 0
+    parseInt(localStorage.getItem("restLike")) || random
   );
 
   const addLikes = () => {

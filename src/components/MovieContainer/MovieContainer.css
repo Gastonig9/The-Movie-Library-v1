@@ -8,7 +8,9 @@ body {
 }
 
 .titlePrincipal {
+    width: 20%;
     margin: auto;
+    display: block;
     font-family: 'Mukta', sans-serif;
     margin-bottom: 10px;
     border-bottom-left-radius: 20px;
